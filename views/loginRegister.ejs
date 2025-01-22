@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Big data</title>
+	<link rel="stylesheet" type="text/css" href="/css/login.css">
+	<script src='./js/alertConfig.js'></script>
+</head>
+<body>
+	<main>
+		
+	<h1 class="titulo"> Big data</h1>
+<div class="container" id="container">
+
+	<div class="form-container sign-up-container">
+		<form id='formularioCreate'>
+			<img class="avatar" src="/icon/avatar.png">
+			<h1>Crear cuenta</h1>
+			<span>Usa tu direccion de correo electronico para registrarte</span>
+			<input class="form-control" id="nombre" type="text" placeholder="Ingresa tu nombre"/>
+			<input class="form-control" id="apellido" type="text" placeholder="Ingresa apellido"/>
+			<input class="form-control" id="telefono" type="tel" placeholder="Ingresa telefono"/>
+			<input class="form-control" id="email" type="email" placeholder="Ingresa tu correo"/>
+			<input class="form-control" id="password" type="password" placeholder="Ingresa tu password"/>
+			<input class="form-control" id="direccion" type="text" placeholder="Ingrese su direccion"/>
+			<button>Crear cuenta</button>
+		</form>
+	</div>
+
+	<div class="form-container sign-in-container">
+		<form id="formularioCreate2" class="formularioLogin">
+			<img class="avatar" src="/icon/avatar.png">
+			<h1>Iniciar Sesion</h1>
+			<span>Ingresa tus credenciales para iniciar sesion</span>
+			<input type="email" placeholder="Email" id='email2'/>
+			<input type="password" placeholder="Password" id='password2'/>
+			<a href="#">Haz olvidado tu password</a>
+			<button>Acceder</button>
+		</form>
+	</div>
+
+	<div class="overlay-container">
+		<div class="overlay">
+
+			<div class="overlay-panel overlay-left">
+				<img class="logo" src="/icon/avatar.png">
+				<h1>Iniciar Sesion</h1>
+				<p>Inicia sesion y comienza la maravillosa aventura con nosotros</p>
+				<button class="ghost" id="signIn">Iniciar Sesion</button>
+			</div>
+
+			<div class="overlay-panel overlay-right">
+				<img class="logo" src="/icon/avatar.png">
+				<h1>Hola, Amigo</h1>
+				<p>Presiona el boton para registrarte</p>
+				<button class="ghost" id="signUp">Crear cuenta</button>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+
+</main>
+<script type="text/javascript">
+	const signUpButton = document.getElementById("signUp");
+const signInButton = document.getElementById("signIn");
+const container = document.getElementById("container");
+
+signUpButton.addEventListener("click", () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener("click", () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
+<script src='./js/login.js'></script>
+<script src='./js/register.js'></script>
+</body>
+</html>
